@@ -1,7 +1,5 @@
 /* 1 */
 * {
-  /* margin: 0; */
-  /* padding: 0 10px; */
 }
 body {
   padding: 5px 0;
@@ -17,7 +15,7 @@ footer {
   background-color: #333333;
   color: white;
   text-align: center;
-  /* margin-top: 150px; */
+
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -36,8 +34,6 @@ nav {
   justify-content: flex-end;
 }
 .menu {
-  display: flex;
-  justify-content: space-evenly;
   padding: 0 10px;
 }
 .menu span {
@@ -67,16 +63,15 @@ nav {
   padding: 0 15px;
 }
 .card {
-  /* height: 250px; */
   display: flex;
   flex-direction: column;
 
   text-align: center;
   background-color: white;
   border-radius: 13px;
-  /* margin-bottom: 10px; */
+
   padding: 0 10px 20px 10px;
-  box-shadow: rgba(255, 0, 0, 0.8);
+  box-shadow: 0 0px 4px rgba(0, 0, 0, 0.8);
 }
 .card h3 {
   color: #2f3b99;
