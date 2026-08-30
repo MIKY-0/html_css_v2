@@ -1,0 +1,165 @@
+:root {
+  --gh-dark: #0d1117;
+  --gh-card: #161b22;
+  --gh-blue: #58a6ff;
+  --gh-border: #30363d;
+  --gh-text: #c9d1d9;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: var(--gh-dark);
+  color: var(--gh-text);
+  font-family: Arial, Helvetica, sans-serif;
+}
+main {
+  padding: 15px 15px;
+}
+
+.gh-header {
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+  gap: 20px;
+  background-color: var(--gh-card);
+  border-bottom: 1px solid var(--gh-border);
+}
+.gh-logo {
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+}
+.gh-search {
+  flex: 1;
+  padding: 8px;
+  background-color: var(--gh-dark);
+  border: 1px solid var(--gh-border);
+  color: white;
+  border-radius: 6px;
+}
+
+.profile-layout {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.main-content {
+  flex: 1;
+}
+
+.avatar {
+  border-radius: 50%;
+  width: 80%;
+  border: 1px solid var(--gh-border);
+  display: block;
+}
+.sidebar h2 {
+  color: white;
+  font-size: 24px;
+  margin-top: 15px;
+}
+.username {
+  color: var(--gh-blue);
+  font-size: 10px;
+  margin-top: 4px;
+}
+.biography {
+  margin: 12px 0;
+
+  /* 줄 간격(여러 줄 텍스트들 있을 때 가독성 위해 사용.) */
+  line-height: 1.5;
+}
+.follow-info {
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+.follow-info strong {
+  color: white;
+}
+.skills-badge {
+  display: inline-block;
+  padding: 4px 10px;
+  font-size: 12px;
+  border-radius: 20px;
+}
+.skills-badge.html {
+  background-color: #e34f26;
+  color: white;
+}
+.skills-badge.css {
+  background-color: #1572b6;
+  color: white;
+}
+.skills-badge.js {
+  background-color: #f7df1e;
+  color: white;
+}
+
+.main-content h3 {
+  margin: 20px 0 10px;
+  color: white;
+  font-size: 20px;
+}
+.grass-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3px;
+  margin: 15px 0;
+  max-width: 87px;
+}
+.grass {
+  /* width,height가 box를 생성. */
+  width: 12px;
+  height: 12px;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+.level-0 {
+  background: var(--gh-card);
+}
+.level-1 {
+  background: #0e4429;
+}
+.level-2 {
+  background: #39d353;
+}
+.repo-card {
+  border: 1px solid var(--gh-border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.repo-card a {
+  color: var(--gh-blue);
+  text-decoration: none;
+}
+
+.lang-dot {
+  display: inline-block;
+  margin-right: 3px;
+  border-radius: 50%;
+  width: 12px;
+  height: 12px;
+}
+.lang-dot.html-dot {
+  background: orangered;
+}
+.lang-dot.js-dot {
+  background: yellow;
+}
+
+@media (max-width: 768px) {
+  .profile-layout {
+    flex-direction: column;
+  }
+  .avatar {
+    max-width: 200px;
+    margin: 0 auto;
+  }
+}
