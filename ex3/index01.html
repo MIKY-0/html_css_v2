@@ -36,7 +36,11 @@
 
     <div class="page">
       <div class="topbar">
-        <input class="searchbar" type="text" placeholder="주문번호,상품명 검색" />
+        <input
+          class="searchbar"
+          type="text"
+          placeholder="주문번호,상품명 검색"
+        />
         <div class="emp">
           <p class="logo-emp">김</p>
           <p class="name-emp">김관리</p>
@@ -72,61 +76,67 @@
           </div>
         </div>
 
-        <p class="t">최근 주문</p>
-        <table>
-          <tbody>
-            <tr class="list-name">
-              <th>주문번호</th>
-              <th>고객</th>
-              <th>상품</th>
-              <th>금액</th>
-              <th>상태</th>
-            </tr>
+        <div class="order-section">
+          <p class="t">최근 주문</p>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr class="list-name">
+                  <th>주문번호</th>
+                  <th>고객</th>
+                  <th>상품</th>
+                  <th>금액</th>
+                  <th>상태</th>
+                </tr>
+              </thead>
 
-            <tr class="list">
-              <td>#20260413-001</td>
-              <td>이영희</td>
-              <td>무선 블루투스 이어폰</td>
-              <td>29,900원</td>
-              <td class="status complete">배송완료</td>
-            </tr>
-            <tr class="list">
-              <td>#20260413-002</td>
-              <td>박지훈</td>
-              <td>스테인리스 텀블러</td>
-              <td>15,900원</td>
-              <td class="status ing">배송중</td>
-            </tr>
-            <tr class="list">
-              <td>#20260413-003</td>
-              <td>최민수</td>
-              <td>휴대용 보조배터리</td>
-              <td>22,900원</td>
-              <td class="status wait">결제대기</td>
-            </tr>
-            <tr class="list">
-              <td>#20260413-004</td>
-              <td>정하늘</td>
-              <td>기계식 키보드</td>
-              <td>89,000원</td>
-              <td class="status cancle">취소</td>
-            </tr>
-            <tr class="list">
-              <td>#20260413-005</td>
-              <td>강수진</td>
-              <td>모니터 받침대</td>
-              <td>34,500원</td>
-              <td class="status complete">배송완료</td>
-            </tr>
-            <tr class="list">
-              <td>#20260413-006</td>
-              <td>윤태호</td>
-              <td>USB-C 허브</td>
-              <td>41,000원</td>
-              <td class="status ing">배송중</td>
-            </tr>
-          </tbody>
-        </table>
+              <tbody>
+                <tr class="list">
+                  <td>#20260413-001</td>
+                  <td>이영희</td>
+                  <td>무선 블루투스 이어폰</td>
+                  <td>29,900원</td>
+                  <td><span class="status complete">배송완료</span></td>
+                </tr>
+                <tr class="list">
+                  <td>#20260413-002</td>
+                  <td>박지훈</td>
+                  <td>스테인리스 텀블러</td>
+                  <td>15,900원</td>
+                  <td><span class="status ing">배송중</span></td>
+                </tr>
+                <tr class="list">
+                  <td>#20260413-003</td>
+                  <td>최민수</td>
+                  <td>휴대용 보조배터리</td>
+                  <td>22,900원</td>
+                  <td><span class="status wait">결제대기</span></td>
+                </tr>
+                <tr class="list">
+                  <td>#20260413-004</td>
+                  <td>정하늘</td>
+                  <td>기계식 키보드</td>
+                  <td>89,000원</td>
+                  <td><span class="status cancle">취소</span></td>
+                </tr>
+                <tr class="list">
+                  <td>#20260413-005</td>
+                  <td>강수진</td>
+                  <td>모니터 받침대</td>
+                  <td>34,500원</td>
+                  <td><span class="status complete">배송완료</span></td>
+                </tr>
+                <tr class="list">
+                  <td>#20260413-006</td>
+                  <td>윤태호</td>
+                  <td>USB-C 허브</td>
+                  <td>41,000원</td>
+                  <td><span class="status ing">배송중</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
 
         <div class="foot">
           <div class="view">
@@ -156,20 +166,28 @@
           <div class="info">
             <h4>최근 활동</h4>
             <div class="client-status">
-              <p class="client-logo">이</p>
-              <div>
-                <p>이영희님이 주문했습니다.</p>
-                <p>3분 전</p>
+              <div class="activity">
+                <p class="client-logo">이</p>
+                <div>
+                  <p>이영희님이 주문했습니다.</p>
+                  <p class="time">3분 전</p>
+                </div>
               </div>
-              <p class="client-logo">박</p>
-              <div>
-                <p>박지훈님이 회원가입했습니다.</p>
-                <p>12분 전</p>
+
+              <div class="activity">
+                <p class="client-logo">박</p>
+                <div>
+                  <p>박지훈님이 회원가입했습니다.</p>
+                  <p class="time">12분 전</p>
+                </div>
               </div>
-              <p class="client-logo">최</p>
-              <div>
-                <p>최민수님이 문의를 남겼습니다.</p>
-                <p>28분 전</p>
+
+              <div class="activity">
+                <p class="client-logo">최</p>
+                <div>
+                  <p>최민수님이 문의를 남겼습니다.</p>
+                  <p class="time">28분 전</p>
+                </div>
               </div>
             </div>
           </div>

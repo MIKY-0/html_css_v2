@@ -30,7 +30,6 @@
 }
 
 body {
-  /* height: 100vh; */
   font-family: -apple-system, "Segoe UI", "Malgun Gothic", sans-serif;
   background: var(--ad-bg);
   color: var(--ad-text);
@@ -94,32 +93,40 @@ a:hover {
 .page {
   display: flex;
   flex-direction: column;
-  width: 100vw;
+  flex: 1;
+  min-width: 0;
 }
 .topbar {
   height: 60px;
   display: flex;
-  padding: 7px 12px;
+  align-items: center;
+  padding: 7px 20px;
+  background: var(--ad-surface);
 }
 .searchbar {
-  padding: 5px 10px;
+  padding: 8px 12px;
   flex: 1;
-  justify-content: flex-start;
   background: var(--ad-background);
   border-radius: 10px;
-  border: none;
-  max-width: 350px;
+  border: 1px solid var(--ad-line);
+  max-width: 550px;
 }
 .emp {
   display: flex;
-  justify-content: flex-end;
+  align-items: center;
+  margin-left: auto;
   gap: 12px;
 }
 .logo-emp {
-  background: var(--ad-primary);
   height: 30px;
+  width: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--ad-primary);
+  flex-shrink: 0;
   border-radius: 50%;
-  color: var(--ad-line);
+  color: white;
 }
 .name-emp {
   font-weight: bold;
@@ -151,8 +158,7 @@ main {
   flex-wrap: wrap;
 }
 .card-item {
-  flex: 1 1 160px;
-  max-width: 40%;
+  flex: 1 1 calc(25% - 9px);
   padding: 15px 15px;
   display: flex;
   flex-direction: column;
@@ -168,25 +174,39 @@ main {
 table {
   height: 35%;
   margin-top: 10px;
-  width: 100%;
 }
-
-.t {
+.order-section {
   margin-top: 20px;
-  padding: 20px 10px;
-  background-color: var(--ad-bg);
+  background: var(--ad-surface);
+  border: 1px solid var(--ad-line);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.t {
+  padding: 16px;
   font-weight: bold;
 }
-.tbody {
-  display: flex;
+.table-wrap {
+  overflow-x: auto;
+}
+table {
+  width: 100%;
+  min-width: 650px;
+  border-collapse: collapse;
+}
+th,
+td {
+  padding: 12px 16px;
+  text-align: left;
+  border-bottom: 1px solid var(--ad-line);
 }
 .list-name {
-  color: var(--ad-side-text);
+  background: var(--ad-sub);
+  color: var(--ad-text);
   font-weight: bold;
   flex: 1;
 }
 .list {
-  flex: 1;
   background: var(--ad-bg);
   border: none;
 }
@@ -209,41 +229,52 @@ table {
   justify-content: space-between;
 }
 .daily-chart {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
+  margin-top: 20px;
 }
 .date {
   display: flex;
   justify-content: space-evenly;
+  gap: 12px;
+  margin-top: 8px;
+}
+.date span {
+  width: 10%;
+  max-width: 100px;
+  text-align: center;
 }
 .chart-view {
   display: flex;
   justify-content: space-evenly;
-  width: 100%;
+  align-items: flex-end;
+  height: 200px;
+  gap: 12px;
+}
+.chart {
+  width: 10%;
+  max-width: 100px;
   background: var(--ad-primary);
-  gap: 22px;
+  border-radius: 5px 5px 0 0;
 }
 .chart.mon {
-  height: 15px;
+  height: 50%;
 }
 .chart.tue {
-  height: 35px;
+  height: 68%;
 }
 .chart.wed {
-  height: 35px;
+  height: 60%;
 }
 .chart.thur {
-  height: 35px;
+  height: 85%;
 }
 .chart.fri {
-  height: 35px;
+  height: 76%;
 }
 .chart.sat {
-  height: 35px;
+  height: 100%;
 }
 .chart.sun {
-  height: 35px;
+  height: 65%;
 }
 
 .info {
@@ -256,11 +287,27 @@ table {
 .client-status {
   margin-top: 15px;
   display: flex;
+  flex-direction: column;
+}
+.activity {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--ad-line);
 }
 .client-logo {
   background: var(--ad-primary);
   color: var(--ad-surface);
-  width: 60px;
+  width: 30px;
   height: 30px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
   border-radius: 50%;
+}
+.time {
+  color: var(--ad-sub);
 }
