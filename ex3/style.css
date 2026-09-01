@@ -311,3 +311,59 @@ td {
 .time {
   color: var(--ad-sub);
 }
+
+
+@media (max-width: 768px) {
+  body {
+    flex-direction: column;
+  }
+
+  aside {
+    width: 100%;
+    height: auto;
+    flex: none;
+  }
+
+  .side {
+    margin-top: 12px;
+    flex-direction: row;
+    gap: 8px;
+    overflow-x: auto;
+  }
+
+  .side > .menu {
+    flex-direction: row;
+    gap: 8px;
+  }
+
+  .side h6 {
+    display: none;
+  }
+
+  .side a {
+    flex-shrink: 0;
+    padding: 8px 12px;
+    border-radius: 5px;
+  }
+
+  .page {
+    width: 100%;
+  }
+
+
+  .card-item {
+    flex-basis: 100%;
+  }
+
+  .foot {
+    height: auto;
+    flex-direction: column;
+  }
+
+  .view,
+  .info {
+    width: 100%;
+    max-width: none;
+    flex: none;
+  }
+}
