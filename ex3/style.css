@@ -1,0 +1,266 @@
+/* ================================
+   CSS 변수: 색상 테마
+================================ */
+:root {
+  /* 사이드바 (어두운 영역) */
+  --ad-side: #1e293b;
+  --ad-side-text: #94a3b8;
+  --ad-side-active: #334155;
+  --ad-background: #dce0e6;
+
+  /* 본문 (밝은 영역) */
+  --ad-bg: #f1f5f9; /* 페이지 배경 */
+  --ad-surface: #ffffff; /* 카드 배경 */
+  --ad-line: #e2e8f0; /* 테두리 */
+  --ad-text: #1e293b; /* 본문 글자 */
+  --ad-sub: #64748b; /* 보조 글자 */
+
+  --ad-primary: #4f46e5; /* 강조, 차트 막대 */
+  --ad-up: #16a34a; /* 증가 */
+  --ad-down: #dc2626; /* 감소 */
+}
+
+/* ================================
+   1단계: 리셋 / 전역 스타일
+================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* height: 100vh; */
+  font-family: -apple-system, "Segoe UI", "Malgun Gothic", sans-serif;
+  background: var(--ad-bg);
+  color: var(--ad-text);
+  line-height: 1.5;
+  display: flex;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none; /* 목록 앞의 점을 없앤다 */
+}
+
+/* =============================== */
+/* 사이드바 */
+/* =============================== */
+aside {
+  height: 100vh;
+  padding: 20px 10px;
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 240px;
+  background: var(--ad-side);
+  color: white;
+}
+
+.account {
+  display: flex;
+  gap: 15px;
+}
+.logo {
+  padding: 2px 10px;
+  aspect-ratio: 1;
+  border-radius: 5px;
+  background-color: var(--ad-primary);
+}
+.account {
+  font-weight: bold;
+}
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  color: var(--ad-side-text);
+}
+.side {
+  margin-top: 35px;
+  gap: 30px;
+}
+a:hover {
+  padding: 10px 10px;
+  background: var(--ad-side-active);
+  color: var(--ad-surface);
+}
+/* =============================== */
+/* 상단 바 */
+/* =============================== */
+.page {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+}
+.topbar {
+  height: 60px;
+  display: flex;
+  padding: 7px 12px;
+}
+.searchbar {
+  padding: 5px 10px;
+  flex: 1;
+  justify-content: flex-start;
+  background: var(--ad-background);
+  border-radius: 10px;
+  border: none;
+  max-width: 350px;
+}
+.emp {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+.logo-emp {
+  background: var(--ad-primary);
+  height: 30px;
+  border-radius: 50%;
+  color: var(--ad-line);
+}
+.name-emp {
+  font-weight: bold;
+}
+
+/* =============================== */
+/* 메인 메뉴 */
+/* =============================== */
+
+main {
+  width: 100%;
+  padding: 20px 15px;
+  background-color: var(--ad-background);
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.dashboard h3 {
+  font-weight: 1300;
+}
+.dashboard p {
+  color: var(--ad-side-text);
+}
+.card-container {
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.card-item {
+  flex: 1 1 160px;
+  max-width: 40%;
+  padding: 15px 15px;
+  display: flex;
+  flex-direction: column;
+  background: var(--ad-bg);
+  border-radius: 12px;
+}
+.up {
+  color: var(--ad-up);
+}
+.down {
+  color: var(--ad-down);
+}
+table {
+  height: 35%;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.t {
+  margin-top: 20px;
+  padding: 20px 10px;
+  background-color: var(--ad-bg);
+  font-weight: bold;
+}
+.tbody {
+  display: flex;
+}
+.list-name {
+  color: var(--ad-side-text);
+  font-weight: bold;
+  flex: 1;
+}
+.list {
+  flex: 1;
+  background: var(--ad-bg);
+  border: none;
+}
+
+/* ============================= */
+/* 차트 */
+/* ============================= */
+.foot {
+  height: 30%;
+  margin-top: 20px;
+  display: flex;
+  gap: 20px;
+}
+.view {
+  padding: 15px 15px;
+  flex: 2 0 auto;
+  display: flex;
+  flex-direction: column;
+  background: var(--ad-bg);
+  justify-content: space-between;
+}
+.daily-chart {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.date {
+  display: flex;
+  justify-content: space-evenly;
+}
+.chart-view {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  background: var(--ad-primary);
+  gap: 22px;
+}
+.chart.mon {
+  height: 15px;
+}
+.chart.tue {
+  height: 35px;
+}
+.chart.wed {
+  height: 35px;
+}
+.chart.thur {
+  height: 35px;
+}
+.chart.fri {
+  height: 35px;
+}
+.chart.sat {
+  height: 35px;
+}
+.chart.sun {
+  height: 35px;
+}
+
+.info {
+  background: var(--ad-bg);
+  flex: 1 2 auto;
+  max-width: 350px;
+  padding: 20px 20px;
+  flex-direction: column;
+}
+.client-status {
+  margin-top: 15px;
+  display: flex;
+}
+.client-logo {
+  background: var(--ad-primary);
+  color: var(--ad-surface);
+  width: 60px;
+  height: 30px;
+  border-radius: 50%;
+}
