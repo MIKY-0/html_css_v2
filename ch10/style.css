@@ -263,7 +263,7 @@ a {
 }
 
 /* 5단계 - 반응처리  */
-/*
+
 @media (max-width: 768px) {
   .sidebar {
     display: none;
@@ -287,7 +287,7 @@ a {
 
   .player-bar {
     /* 좁은 화면에서 진행바가 아주 작아 보인다 
-    그래서 화면 아래로 위치를 조정해 보자 
+    그래서 화면 아래로 위치를 조정해 보자 */
     position: absolute;
     bottom: 0;
     left: 0;
@@ -300,4 +300,3 @@ a {
     position: fixed;
   }
 }
-*/
