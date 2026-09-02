@@ -28,7 +28,8 @@ body {
   /* 문서 전체 스크롤을 막는다 */
   overflow: hidden;
   font-family:
-    "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
 a {
