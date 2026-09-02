@@ -40,6 +40,7 @@ body {
 a {
   text-decoration: none;
   color: inherit;
+  padding: 10px;
 }
 
 ul {
@@ -83,7 +84,6 @@ aside {
   gap: 30px;
 }
 a:hover {
-  padding: 10px 10px;
   background: var(--ad-side-active);
   color: var(--ad-surface);
 }
@@ -127,6 +127,7 @@ a:hover {
   flex-shrink: 0;
   border-radius: 50%;
   color: white;
+  cursor: pointer;
 }
 .name-emp {
   font-weight: bold;
@@ -164,6 +165,10 @@ main {
   flex-direction: column;
   background: var(--ad-bg);
   border-radius: 12px;
+  transition: transform 0.1s ease;
+}
+.card-item:hover {
+  transform: scale(1.05);
 }
 .up {
   color: var(--ad-up);
@@ -199,6 +204,30 @@ td {
   padding: 12px 16px;
   text-align: left;
   border-bottom: 1px solid var(--ad-line);
+}
+.status {
+  border-radius: 15px;
+  padding: 5px;
+}
+.status.complete {
+  background: rgb(145, 218, 37);
+  color: green;
+  font-weight: bold;
+}
+.status.ing {
+  background: rgb(111, 111, 221);
+  color: rgb(6, 6, 121);
+  font-weight: bold;
+}
+.status.wait {
+  background: rgb(226, 226, 159);
+  color: rgb(112, 112, 5);
+  font-weight: bold;
+}
+.status.cancle {
+  background: rgb(224, 103, 103);
+  color: rgb(124, 3, 3);
+  font-weight: bold;
 }
 .list-name {
   background: var(--ad-sub);
@@ -254,6 +283,10 @@ td {
   max-width: 100px;
   background: var(--ad-primary);
   border-radius: 5px 5px 0 0;
+  transition: transform 0.1s ease;
+}
+.chart:hover {
+  transform: scale(1.05);
 }
 .chart.mon {
   height: 50%;
@@ -312,7 +345,7 @@ td {
   color: var(--ad-sub);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   body {
     flex-direction: column;
   }
@@ -325,7 +358,7 @@ td {
     margin-top: 12px;
     flex-direction: row;
     gap: 8px;
-    overflow-x: auto;
+    /* overflow-x: auto; */
   }
   .side > .menu {
     flex-direction: row;
@@ -343,7 +376,7 @@ td {
     width: 100%;
   }
   .card-item {
-    flex-basis: 100%;
+    flex: 1 1 calc(50% - 6px);
   }
   .foot {
     height: auto;
@@ -354,5 +387,15 @@ td {
     width: 100%;
     max-width: none;
     flex: none;
+  }
+
+  @media (max-width: 768px) {
+    .card-item {
+      flex: 1 1 100%;
+    }
+    .client-status {
+      height: 75px;
+      overflow-y: auto;
+    }
   }
 }
